@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Validate Forms</h2>
+
+    <form name="myform" onsubmit="return validateform()">
+        <label for="name">Name:</label><br>
+        <input type="text" name="name"><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" name="password"><br>
+        
+        <label for="password2">Re-Enter Password:</label><br>
+        <input type="password" name="password2"><br>
+      
+        <label for="email">Email:</label><br>
+        <input type="email"  name="email"><br>
+        
+       <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateform() {
+            var name = document.myform.name.value;
+            var password = document.myform.password.value;
+            var password2 = document.myform.password2.value; 
+            var email = document.myform.email.value;
+
+            if (name == "") {
+                alert("Name can't be blank");
+                return false;
+            } else if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            } else if (password !== password2) {
+                alert("Passwords do not match");
+                return false;
+            }
+          
+            if (email === "") {
+            alert("Email must be filled out");
+            return false; 
+            }
+            else if (!isValidEmail(email)) {
+            alert("Invalid email format");
+            return false; 
+            }
+           else{
+            return true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
