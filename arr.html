@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array Operations</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="number"] {
+        width: 10px;
+        margin-right: 10px;
+    }
+    button {
+      border-radius: 15px;
+        padding: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+      background: #cccc;
+    }
+    .output {
+        margin-top: 20px;
+    }
+  input{
+    border-radius:50px;
+    font-size:15px;
+    padding:20px;
+    color:#666666;
+  }
+</style>
+</head>
+<body>
+    <h2>Array Operations</h2>
+
+    <div>
+        <label for="inputArray">Enter numbers separated by commas:</label><br><br>
+        <input type="text" id="inputArray" placeholder="e.g., 1, 2, 3, 4"><br><br>
+       <div class="output" id="output"></div><br>
+
+        <button onclick="calculateLength()">Calculate Length</button>&nbsp;&nbsp;&nbsp;
+        <button onclick="calculateSum()">Calculate Sum</button>&nbsp;&nbsp;&nbsp;
+        <button onclick="reverseArray()">Reverse Array</button>&nbsp;&nbsp;&nbsp;
+        <button onclick="sortArray()">Sort Array(Ascending)</button>&nbsp;&nbsp;&nbsp;
+        <button onclick="findMax()">Find Maximum</button>&nbsp;&nbsp;&nbsp;
+    </div>
+
+   
+  
+</body>
+</html>
